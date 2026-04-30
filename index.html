@@ -2,221 +2,438 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PlusStyle</title>
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  color: #111;
-}
-
-header {
-  background: #000;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.container {
-  padding: 15px;
+  font-family: Arial;
+  background:#e4e4e4;
+  text-align:center;
 }
 
 .card {
-  background: white;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  background:white;
+  padding:15px;
+  margin:15px;
+  border-radius:12px;
 }
 
-h3 {
-  margin: 5px 0;
-}
-
-small {
-  color: gray;
+img {
+  width:200px;
+  border-radius:10px;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
+  padding:10px;
+  background:#555;
+  color:white;
+  border:none;
+  border-radius:8px;
+  margin-top:8px;
 }
 
-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: white;
-  display: flex;
-  justify-content: space-around;
-  border-top: 1px solid #ccc;
-  padding: 8px;
-}
-
-.hidden {
-  display: none;
+input {
+  padding:8px;
+  width:200px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
-  PLUSSTYLE
-</header>
+<h2>PlusStyle 🖤</h2>
+<p>Moda inclusiva para todos os corpos</p>
 
-<!-- HOME -->
-<div id="home" class="container">
+<button onclick="mostrar('cadastro')">Começar</button>
+
+<!-- CADASTRO -->
+<div id="cadastro" style="display:none">
+  <h3>Cadastro</h3>
+  <input placeholder="Seu estilo"><br><br>
+  <button onclick="mostrar('roupas')">Ver catálogo</button>
+</div>
+
+<!-- ROUPAS -->
+<div id="roupas" style="display:none">
+
+  <h3>Catálogo PlusStyle 🛍️</h3>
 
   <div class="card">
-    <h3>Moda Plus Size Moderna</h3>
-    <small>
-      Peças pensadas para valorizar todos os corpos com conforto, estilo e elegância.
-    </small>
+    <img src="https://img.ltwebstatic.com/v4/j/pi/2025/10/27/98/1761562396bad7da6044bf41beef21dc52f4ce6c7b_thumbnail_405x552.jpg">
+    <p>Blusa confortável</p>
+    <p>Categoria: Blusas</p>
+    <p>R$ 79,90</p>
+    <button onclick="comprar()">Comprar</button>
   </div>
 
   <div class="card">
-    <h3>Vestido Midi Elegance</h3>
-    <small>
-      Modelagem fluida que se adapta ao corpo. Ideal para ocasiões formais e casuais.
-      <br><br>
-      Tamanhos: 44 ao 60  
-      <br>Cores: Preto, vinho, bege  
-    </small>
-    <button onclick="addCarrinho('Vestido Midi')">Adicionar ao carrinho</button>
+    <img src="https://img.ltwebstatic.com/v4/j/pi/2025/09/30/36/1759225497a9d8a7795f85b14e0419a9b53b589b92_thumbnail_405x552.jpg">
+    <p>Conjunto branco elegante</p>
+    <p>Categoria: Conjuntos</p>
+    <p>R$ 149,90</p>
+    <button onclick="comprar()">Comprar</button>
   </div>
 
   <div class="card">
-    <h3>Conjunto Pantalona Premium</h3>
-    <small>
-      Conforto e sofisticação em um único look.
-      <br><br>
-      Tamanhos: 46 ao 62  
-      <br>Cores: Preto, cinza, nude  
-    </small>
-    <button onclick="addCarrinho('Conjunto Pantalona')">Adicionar ao carrinho</button>
+    <img src="https://img.ltwebstatic.com/v4/j/pi/2025/08/25/78/1756118482d0143cb5edd9740e20daf0fd09f213ed_thumbnail_405x552.jpg">
+    <p>Conjunto azul moderno</p>
+    <p>Categoria: Conjuntos</p>
+    <p>R$ 159,90</p>
+    <button onclick="comprar()">Comprar</button>
   </div>
+
+  <div class="card">
+    <img src="https://img.ltwebstatic.com/images3_pi/2023/12/01/d9/170142017329dcc361fb963d7bbca4761469a521bf_thumbnail_405x552.jpg">
+    <p>Vestido preto</p>
+    <p>Categoria: Vestidos</p>
+    <p>R$ 129,90</p>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <div class="card">
+    <p>👙 Biquínis Plus Size</p>
+    <p>Categoria: Praia</p>
+    <p>A partir de R$ 99,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>🖤 Lingerie</p>
+    <p>Categoria: Íntimo</p>
+    <p>A partir de R$ 69,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>👟 Calçados</p>
+    <p>Categoria: Acessórios</p>
+    <p>A partir de R$ 119,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>🧥 Casacos e Jaquetas</p>
+    <p>Categoria: Inverno</p>
+    <p>A partir de R$ 179,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>👖 Calças e Pantalonas</p>
+    <p>Categoria: Casual</p>
+    <p>A partir de R$ 139,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>🩶 Moletons</p>
+    <p>Categoria: Conforto</p>
+    <p>A partir de R$ 129,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>✨ Croppeds</p>
+    <p>Categoria: Jovem</p>
+    <p>A partir de R$ 59,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>🤍 Roupas básicas</p>
+    <p>Categoria: Essenciais</p>
+    <p>A partir de R$ 49,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <button onclick="mostrar('sobmedida')">Fazer sob medida</button>
+  <br><br>
+  <button onclick="mostrar('sobre')">Sobre a loja</button>
 
 </div>
 
-<!-- PRODUTOS -->
-<div id="produtos" class="container hidden">
+<!-- SOB MEDIDA -->
+<div id="sobmedida" style="display:none">
 
-  <div class="card">
-    <h3>Blusa Assimétrica</h3>
-    <small>
-      Corte moderno que valoriza o corpo.
-      <br><br>
-      Tamanhos: 44 ao 58  
-      <br>Cores: Branco, preto  
-    </small>
-    <button onclick="addCarrinho('Blusa')">Adicionar</button>
-  </div>
+  <h3>Roupas Sob Medida ✂️</h3>
 
-  <div class="card">
-    <h3>Conjunto Alfaiataria Plus</h3>
-    <small>
-      Estilo elegante com caimento impecável.
-      <br><br>
-      Tamanhos: 48 ao 64  
-      <br>Cores: Preto, cinza escuro  
-    </small>
-    <button onclick="addCarrinho('Alfaiataria')">Adicionar</button>
-  </div>
+  <p>Descreva sua peça:</p>
+
+  <input placeholder="Tipo de roupa"><br><br>
+  <input placeholder="Cor"><br><br>
+  <input placeholder="Estilo"><br><br>
+  <input placeholder="Referência"><br><br>
+
+  <button onclick="enviarPedido()">Enviar pedido</button>
+  <br><br>
+  <button onclick="mostrar('roupas')">Voltar</button>
 
 </div>
 
-<!-- CARRINHO -->
-<div id="carrinho" class="container hidden">
-  <h3>Seu Carrinho</h3>
-  <ul id="lista"></ul>
-  <button onclick="finalizar()">Finalizar compra</button>
-</div>
+<!-- SOBRE -->
+<div id="sobre" style="display:none">
 
-<!-- EXPERIÊNCIA -->
-<div id="experiencia" class="container hidden">
+  <h3>Sobre a PlusStyle</h3>
 
-  <div class="card">
-    <h3>Provadores</h3>
-    <small>
-      Nossos provadores são amplos, confortáveis e pensados para garantir liberdade
-      de movimento, privacidade e bem-estar durante a prova das peças.
-    </small>
-  </div>
+  <p>
+    A PlusStyle é uma loja inclusiva voltada para todos os corpos,
+    oferecendo moda acessível, moderna e representativa para o público plus size.
+  </p>
 
-  <div class="card">
-    <h3>Atendimento</h3>
-    <small>
-      Oferecemos atendimento individualizado, respeitando o estilo e as necessidades
-      de cada cliente, com uma abordagem acolhedora e sem julgamentos.
-    </small>
-  </div>
+  <p>
+    📍 Endereço fictício: Bairro Nova Forma, Rua da Inclusão, 123 – CWB
+  </p>
+
+  <button onclick="abrirLoja()">Ir para loja online</button>
+  <br><br>
+  <button onclick="mostrar('home')">Voltar</button>
 
 </div>
-
-<!-- AVALIAÇÕES -->
-<div id="avaliacoes" class="container hidden">
-
-  <div class="card">
-    <h3>Avaliações</h3>
-    <small>
-      ⭐⭐⭐⭐⭐  
-      “Me senti extremamente confortável e respeitada.”  
-      <br><br>
-      ⭐⭐⭐⭐⭐  
-      “Roupas modernas e atendimento impecável.”  
-      <br><br>
-      ⭐⭐⭐⭐⭐  
-      “Finalmente encontrei uma loja que pensa em corpos reais.”
-    </small>
-  </div>
-
-</div>
-
-<!-- MENU -->
-<nav>
-  <button onclick="trocar('home')">Início</button>
-  <button onclick="trocar('produtos')">Produtos</button>
-  <button onclick="trocar('carrinho')">Carrinho</button>
-  <button onclick="trocar('experiencia')">Loja</button>
-  <button onclick="trocar('avaliacoes')">Avaliações</button>
-</nav>
 
 <script>
-let carrinho = [];
+function mostrar(id){
+  document.getElementById('cadastro').style.display='none';
+  document.getElementById('roupas').style.display='none';
+  document.getElementById('sobre').style.display='none';
+  document.getElementById('sobmedida').style.display='none';
 
-function trocar(tela) {
-  document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-  document.getElementById(tela).classList.remove('hidden');
+  if(id === 'home'){
+    location.reload();
+  } else {
+    document.getElementById(id).style.display='block';
+  }
 }
 
-function addCarrinho(produto) {
-  carrinho.push(produto);
-  atualizar();
-  alert("Adicionado ao carrinho");
+function comprar(){
+  alert("Produto adicionado (simulação)");
 }
 
-function atualizar() {
-  let lista = document.getElementById('lista');
-  lista.innerHTML = "";
-  carrinho.forEach(item => {
-    let li = document.createElement('li');
-    li.textContent = item;
-    lista.appendChild(li);
-  });
+function enviarPedido(){
+  alert("Pedido sob medida enviado! Entraremos em contato.");
 }
 
-function finalizar() {
-  alert("Compra finalizada (simulação)");
+function abrirLoja(){
+  window.open("https://lauhbanas.github.io/PlusStyle/", "_blank");
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>PlusStyle</title>
+
+<style>
+body {
+  font-family: Arial;
+  background:#e4e4e4;
+  text-align:center;
+}
+
+.card {
+  background:white;
+  padding:15px;
+  margin:15px;
+  border-radius:12px;
+}
+
+img {
+  width:200px;
+  border-radius:10px;
+}
+
+button {
+  padding:10px;
+  background:#555;
+  color:white;
+  border:none;
+  border-radius:8px;
+  margin-top:8px;
+}
+
+input {
+  padding:8px;
+  width:200px;
+}
+</style>
+
+</head>
+<body>
+
+<h2>PlusStyle 🖤</h2>
+<p>Moda inclusiva para todos os corpos</p>
+
+<button onclick="mostrar('cadastro')">Começar</button>
+
+<!-- CADASTRO -->
+<div id="cadastro" style="display:none">
+  <h3>Cadastro</h3>
+  <input placeholder="Seu estilo"><br><br>
+  <button onclick="mostrar('roupas')">Ver catálogo</button>
+</div>
+
+<!-- ROUPAS -->
+<div id="roupas" style="display:none">
+
+  <h3>Catálogo PlusStyle 🛍️</h3>
+
+  <div class="card">
+    <img src="https://img.ltwebstatic.com/v4/j/pi/2025/10/27/98/1761562396bad7da6044bf41beef21dc52f4ce6c7b_thumbnail_405x552.jpg">
+    <p>Blusa confortável</p>
+    <p>Categoria: Blusas</p>
+    <p>R$ 79,90</p>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://img.ltwebstatic.com/v4/j/pi/2025/09/30/36/1759225497a9d8a7795f85b14e0419a9b53b589b92_thumbnail_405x552.jpg">
+    <p>Conjunto branco elegante</p>
+    <p>Categoria: Conjuntos</p>
+    <p>R$ 149,90</p>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://img.ltwebstatic.com/v4/j/pi/2025/08/25/78/1756118482d0143cb5edd9740e20daf0fd09f213ed_thumbnail_405x552.jpg">
+    <p>Conjunto azul moderno</p>
+    <p>Categoria: Conjuntos</p>
+    <p>R$ 159,90</p>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <div class="card">
+    <img src="https://img.ltwebstatic.com/images3_pi/2023/12/01/d9/170142017329dcc361fb963d7bbca4761469a521bf_thumbnail_405x552.jpg">
+    <p>Vestido preto</p>
+    <p>Categoria: Vestidos</p>
+    <p>R$ 129,90</p>
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <div class="card">
+    <p>👙 Biquínis Plus Size</p>
+    <p>Categoria: Praia</p>
+    <p>A partir de R$ 99,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>🖤 Lingerie</p>
+    <p>Categoria: Íntimo</p>
+    <p>A partir de R$ 69,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>👟 Calçados</p>
+    <p>Categoria: Acessórios</p>
+    <p>A partir de R$ 119,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>🧥 Casacos e Jaquetas</p>
+    <p>Categoria: Inverno</p>
+    <p>A partir de R$ 179,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>👖 Calças e Pantalonas</p>
+    <p>Categoria: Casual</p>
+    <p>A partir de R$ 139,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>🩶 Moletons</p>
+    <p>Categoria: Conforto</p>
+    <p>A partir de R$ 129,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>✨ Croppeds</p>
+    <p>Categoria: Jovem</p>
+    <p>A partir de R$ 59,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <div class="card">
+    <p>🤍 Roupas básicas</p>
+    <p>Categoria: Essenciais</p>
+    <p>A partir de R$ 49,90</p>
+    <button onclick="comprar()">Ver opções</button>
+  </div>
+
+  <button onclick="mostrar('sobmedida')">Fazer sob medida</button>
+  <br><br>
+  <button onclick="mostrar('sobre')">Sobre a loja</button>
+
+</div>
+
+<!-- SOB MEDIDA -->
+<div id="sobmedida" style="display:none">
+
+  <h3>Roupas Sob Medida ✂️</h3>
+
+  <p>Descreva sua peça:</p>
+
+  <input placeholder="Tipo de roupa"><br><br>
+  <input placeholder="Cor"><br><br>
+  <input placeholder="Estilo"><br><br>
+  <input placeholder="Referência"><br><br>
+
+  <button onclick="enviarPedido()">Enviar pedido</button>
+  <br><br>
+  <button onclick="mostrar('roupas')">Voltar</button>
+
+</div>
+
+<!-- SOBRE -->
+<div id="sobre" style="display:none">
+
+  <h3>Sobre a PlusStyle</h3>
+
+  <p>
+    A PlusStyle é uma loja inclusiva voltada para todos os corpos,
+    oferecendo moda acessível, moderna e representativa para o público plus size.
+  </p>
+
+  <p>
+    📍 Endereço fictício: Bairro Nova Forma, Rua da Inclusão, 123 – CWB
+  </p>
+
+  <button onclick="abrirLoja()">Ir para loja online</button>
+  <br><br>
+  <button onclick="mostrar('home')">Voltar</button>
+
+</div>
+
+<script>
+function mostrar(id){
+  document.getElementById('cadastro').style.display='none';
+  document.getElementById('roupas').style.display='none';
+  document.getElementById('sobre').style.display='none';
+  document.getElementById('sobmedida').style.display='none';
+
+  if(id === 'home'){
+    location.reload();
+  } else {
+    document.getElementById(id).style.display='block';
+  }
+}
+
+function comprar(){
+  alert("Produto adicionado (simulação)");
+}
+
+function enviarPedido(){
+  alert("Pedido sob medida enviado! Entraremos em contato.");
+}
+
+function abrirLoja(){
+  window.open("https://lauhbanas.github.io/PlusStyle/", "_blank");
 }
 </script>
 
