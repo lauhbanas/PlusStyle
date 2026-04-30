@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
@@ -8,15 +8,18 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial;
-  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #111;
 }
 
 header {
-  background: #ff4d88;
+  background: #000;
   color: white;
   padding: 15px;
   text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .container {
@@ -25,25 +28,27 @@ header {
 
 .card {
   background: white;
-  border-radius: 15px;
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  height: 230px;
-  object-fit: cover;
+h3 {
+  margin: 5px 0;
+}
+
+small {
+  color: gray;
 }
 
 button {
   width: 100%;
   padding: 10px;
-  background: #ff4d88;
+  margin-top: 8px;
+  background: black;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 nav {
@@ -53,7 +58,8 @@ nav {
   background: white;
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  border-top: 1px solid #ccc;
+  padding: 8px;
 }
 
 .hidden {
@@ -65,80 +71,138 @@ nav {
 <body>
 
 <header>
-  <h2>PlusStyle 💖</h2>
+  PLUSSTYLE
 </header>
 
+<!-- HOME -->
 <div id="home" class="container">
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-    <h3>Você linda do seu jeito 💖</h3>
+    <h3>Moda Plus Size Moderna</h3>
+    <small>
+      Peças pensadas para valorizar todos os corpos com conforto, estilo e elegância.
+    </small>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990">
-    <h3>Vestido Preto Elegante</h3>
-    <button onclick="addCarrinho('Vestido Preto')">Adicionar ao carrinho</button>
+    <h3>Vestido Midi Elegance</h3>
+    <small>
+      Modelagem fluida que se adapta ao corpo. Ideal para ocasiões formais e casuais.
+      <br><br>
+      Tamanhos: 44 ao 60  
+      <br>Cores: Preto, vinho, bege  
+    </small>
+    <button onclick="addCarrinho('Vestido Midi')">Adicionar ao carrinho</button>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1583001809873-a128495da465">
-    <h3>Conjunto Pantalona</h3>
+    <h3>Conjunto Pantalona Premium</h3>
+    <small>
+      Conforto e sofisticação em um único look.
+      <br><br>
+      Tamanhos: 46 ao 62  
+      <br>Cores: Preto, cinza, nude  
+    </small>
     <button onclick="addCarrinho('Conjunto Pantalona')">Adicionar ao carrinho</button>
   </div>
 
 </div>
 
+<!-- PRODUTOS -->
 <div id="produtos" class="container hidden">
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0">
     <h3>Blusa Assimétrica</h3>
+    <small>
+      Corte moderno que valoriza o corpo.
+      <br><br>
+      Tamanhos: 44 ao 58  
+      <br>Cores: Branco, preto  
+    </small>
     <button onclick="addCarrinho('Blusa')">Adicionar</button>
   </div>
 
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157">
-    <h3>Conjunto Lilás</h3>
-    <button onclick="addCarrinho('Conjunto Lilás')">Adicionar</button>
+    <h3>Conjunto Alfaiataria Plus</h3>
+    <small>
+      Estilo elegante com caimento impecável.
+      <br><br>
+      Tamanhos: 48 ao 64  
+      <br>Cores: Preto, cinza escuro  
+    </small>
+    <button onclick="addCarrinho('Alfaiataria')">Adicionar</button>
   </div>
 
 </div>
 
+<!-- CARRINHO -->
 <div id="carrinho" class="container hidden">
-  <h3>Seu Carrinho 🛒</h3>
+  <h3>Seu Carrinho</h3>
   <ul id="lista"></ul>
   <button onclick="finalizar()">Finalizar compra</button>
 </div>
 
-<div id="perfil" class="container hidden">
-  <h3>Minha Conta 👤</h3>
-  <p>Login fictício</p>
+<!-- EXPERIÊNCIA -->
+<div id="experiencia" class="container hidden">
+
+  <div class="card">
+    <h3>Provadores</h3>
+    <small>
+      Nossos provadores são amplos, confortáveis e pensados para garantir liberdade
+      de movimento, privacidade e bem-estar durante a prova das peças.
+    </small>
+  </div>
+
+  <div class="card">
+    <h3>Atendimento</h3>
+    <small>
+      Oferecemos atendimento individualizado, respeitando o estilo e as necessidades
+      de cada cliente, com uma abordagem acolhedora e sem julgamentos.
+    </small>
+  </div>
+
 </div>
 
+<!-- AVALIAÇÕES -->
+<div id="avaliacoes" class="container hidden">
+
+  <div class="card">
+    <h3>Avaliações</h3>
+    <small>
+      ⭐⭐⭐⭐⭐  
+      “Me senti extremamente confortável e respeitada.”  
+      <br><br>
+      ⭐⭐⭐⭐⭐  
+      “Roupas modernas e atendimento impecável.”  
+      <br><br>
+      ⭐⭐⭐⭐⭐  
+      “Finalmente encontrei uma loja que pensa em corpos reais.”
+    </small>
+  </div>
+
+</div>
+
+<!-- MENU -->
 <nav>
-  <button onclick="trocar('home')">🏠</button>
-  <button onclick="trocar('produtos')">👗</button>
-  <button onclick="trocar('carrinho')">🛒</button>
-  <button onclick="trocar('perfil')">👤</button>
+  <button onclick="trocar('home')">Início</button>
+  <button onclick="trocar('produtos')">Produtos</button>
+  <button onclick="trocar('carrinho')">Carrinho</button>
+  <button onclick="trocar('experiencia')">Loja</button>
+  <button onclick="trocar('avaliacoes')">Avaliações</button>
 </nav>
 
 <script>
 let carrinho = [];
 
 function trocar(tela) {
-  document.getElementById('home').classList.add('hidden');
-  document.getElementById('produtos').classList.add('hidden');
-  document.getElementById('carrinho').classList.add('hidden');
-  document.getElementById('perfil').classList.add('hidden');
-
+  document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
   document.getElementById(tela).classList.remove('hidden');
 }
 
 function addCarrinho(produto) {
   carrinho.push(produto);
   atualizar();
-  alert("Adicionado ao carrinho 💖");
+  alert("Adicionado ao carrinho");
 }
 
 function atualizar() {
@@ -152,7 +216,7 @@ function atualizar() {
 }
 
 function finalizar() {
-  alert("Compra finalizada 💖 (simulação)");
+  alert("Compra finalizada (simulação)");
 }
 </script>
 
